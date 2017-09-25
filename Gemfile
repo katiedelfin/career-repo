@@ -48,3 +48,6 @@ gem "powder", "~> 0.3.2", :group => [:development]
 
 # Added at 2017-09-25 13:01:10 -0600 by katiedelfin:
 gem "haml-rails", "~> 1.0"
+
+# Added at 2017-09-25 13:15:18 -0600 by katiedelfin:
+gem "devise", "~> 4.3"
