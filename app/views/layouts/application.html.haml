@@ -8,16 +8,31 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
 
-    %p= notice
-    %p= alert
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
 
-    - if user_signed_in?
-      = current_user.email
-      |
-      = link_to "Sign out", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Sign in", new_user_session_path
-      |
-      = link_to "Sign up", new_user_registration_path
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "Career Repo", root_path, class: 'navbar-brand'
 
-    = yield
+        #navbar-collapse.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li.navbar-text Signed in as #{current_user.email}
+              %li= link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign in", new_user_session_path
+              %li= link_to "Sign up", new_user_registration_path
+
+    %div.container
+      - if notice.present?
+        %div.alert.alert-success= notice
+
+      - if alert.present?
+        %div.alert.alert-warning= alert
+
+      = yield
