@@ -1,24 +1,11 @@
-# README
+# Career Repo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small app created to help store and access all the historical information that
+goes into preparing resume's, cover letter's, and interviews.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby 2.4.2
+- Node.js
+- yarn
+- PostgresSQL 9.6.5
