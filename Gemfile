@@ -48,3 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2017-09-25 13:01:01 -0600 by katiedelfin:
 gem "powder", "~> 0.3.2", :group => [:development]
+
+# Added at 2017-09-25 13:01:10 -0600 by katiedelfin:
+gem "haml-rails", "~> 1.0"
