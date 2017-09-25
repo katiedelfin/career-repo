@@ -53,3 +53,5 @@ gem "haml-rails", "~> 1.0"
 
 # Added at 2017-09-25 13:15:18 -0600 by katiedelfin:
 gem "devise", "~> 4.3"
+
+gem 'simple_form'
