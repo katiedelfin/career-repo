@@ -1,5 +1,11 @@
 {
   "name": "career-repo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Katie Delfin <katiedelfin@gmail.com>",
+  "license": "MIT"
 }
