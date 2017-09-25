@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/katiedelfin/career-repo/badges/gpa.svg)](https://codeclimate.com/github/katiedelfin/career-repo) [![Test Coverage](https://codeclimate.com/github/katiedelfin/career-repo/badges/coverage.svg)](https://codeclimate.com/github/katiedelfin/career-repo/coverage)
+
 # Career Repo
 
 A small app created to help store and access all the historical information that
