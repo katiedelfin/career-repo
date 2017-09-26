@@ -57,3 +57,6 @@ gem "devise", "~> 4.3"
 gem 'simple_form'
 
 gem 'nested_form_fields'
+
+# Added at 2017-09-26 11:07:12 -0600 by katiedelfin:
+gem "acts-as-taggable-on", "~> 5.0"
