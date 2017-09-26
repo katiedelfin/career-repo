@@ -20,6 +20,12 @@
           = link_to "Career Repo", root_path, class: 'navbar-brand'
 
         #navbar-collapse.collapse.navbar-collapse
+          = form_tag(roles_path, class: 'form navbar-form navbar-left', method: :get) do
+            .input-group
+              = text_field_tag :tags, params[:tags], class: 'form-control'
+              .input-group-btn
+                = submit_tag 'Search', class: 'btn btn-default'
+
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
               %li.navbar-text Signed in as #{current_user.email}

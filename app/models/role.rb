@@ -10,4 +10,28 @@ class Role < ApplicationRecord
 
   validates :user, presence: true
   validates :title, presence: true
+
+  def filtered_responsibilities(tags = [])
+    if tags.any?
+      responsibilities.tagged_with(tags, any: true)
+    else
+      responsibilities
+    end
+  end
+
+  def filtered_accomplishments(tags = [])
+    if tags.any?
+      accomplishments.tagged_with(tags, any: true)
+    else
+      accomplishments
+    end
+  end
+
+  def filtered_projects(tags = [])
+    if tags.any?
+      projects.tagged_with(tags, any: true)
+    else
+      projects
+    end
+  end
 end

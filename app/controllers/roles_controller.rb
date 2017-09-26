@@ -1,6 +1,7 @@
 class RolesController < ApplicationController
   def index
     @roles = current_user.roles
+    @tags = params[:tags].present? ? params[:tags].split(" ") : []
   end
 
   def new

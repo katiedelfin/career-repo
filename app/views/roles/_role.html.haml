@@ -1,14 +1,14 @@
 .well
   = link_to "Delete", role_path(role), method: :delete, class: "btn btn-danger pull-right"
-  = link_to "Edit", edit_role_path(role), class: "btn btn-primary pull-right"
+  = link_to "Edit", edit_role_path(role), class: "btn btn-default pull-right"
 
   %h3= role.title
 
   %h4 Responsibilities
-  %ul= render partial: :responsibility, collection: role.responsibilities
+  %ul= render partial: :responsibility, collection: role.filtered_responsibilities(@tags)
 
   %h4 Accomplisments
-  %ul= render partial: :accompliment, collection: role.accomplishments
+  %ul= render partial: :accomplishment, collection: role.filtered_accomplishments(@tags)
 
   %h4 Projects
-  %ul= render partial: :project, collection: role.projects
+  %ul= render partial: :project, collection: role.filtered_projects(@tags)
