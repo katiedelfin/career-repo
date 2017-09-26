@@ -1,0 +1,4 @@
+.well
+  = link_to "Delete", role_path(role), method: :delete, class: "btn btn-danger pull-right"
+  = link_to "Edit", edit_role_path(role), class: "btn btn-primary pull-right"
+  %h3= role.title
