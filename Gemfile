@@ -55,3 +55,5 @@ gem "haml-rails", "~> 1.0"
 gem "devise", "~> 4.3"
 
 gem 'simple_form'
+
+gem 'nested_form_fields'
