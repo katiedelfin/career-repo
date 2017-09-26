@@ -7,6 +7,7 @@
       .well
         = rf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
         = rf.input :text
+        = rf.input :tag_list, input_html: { value: rf.object.tag_list.to_s }
 
     = f.add_nested_fields_link :responsibilities, 'Add Responsibility', class: 'btn btn-primary'
 
@@ -16,6 +17,7 @@
       .well
         = af.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
         = af.input :text
+        = af.input :tag_list, input_html: { value: af.object.tag_list.to_s }
 
     = f.add_nested_fields_link :accomplishments, 'Add Acomplishment', class: 'btn btn-primary'
 
@@ -26,6 +28,7 @@
         = pf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
         = pf.input :title
         = pf.input :description
+        = pf.input :tag_list, input_html: { value: pf.object.tag_list.to_s }
 
     = f.add_nested_fields_link :projects, 'Add Project', class: 'btn btn-primary'
 
