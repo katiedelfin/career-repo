@@ -1,7 +1,4 @@
-.well
-  = link_to "Delete", role_path(role), method: :delete, class: "btn btn-danger pull-right"
-  = link_to "Edit", edit_role_path(role), class: "btn btn-default pull-right"
-
+.well.clearfix
   %h3= role.title
 
   %h4 Responsibilities
@@ -12,3 +9,7 @@
 
   %h4 Projects
   %ul= render partial: :project, collection: role.filtered_projects(@tags)
+
+  .btn-group.pull-right
+    = link_to "", edit_role_path(role), class: "btn btn-default glyphicon glyphicon-pencil"
+    = link_to "", role_path(role), method: :delete, class: "btn btn-danger glyphicon glyphicon-trash"

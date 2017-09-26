@@ -1,35 +1,38 @@
 = simple_form_for(@role, html: { class: 'form-horizontal' }) do |f|
-  = f.input :title
+  .form-group
+    .well.well-lg
+      = f.input :title
 
-  = field_set_tag 'Responsibilities' do
+  = field_set_tag 'Responsibilities', class: 'form-group' do
 
     = f.nested_fields_for :responsibilities do |rf|
-      .well
-        = rf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
+      .well.well-lg.clearfix
         = rf.input :text
         = rf.input :tag_list, input_html: { value: rf.object.tag_list.to_s }
+        = rf.remove_nested_fields_link '', class: 'btn btn-danger pull-right glyphicon glyphicon-trash', role: 'button'
 
     = f.add_nested_fields_link :responsibilities, 'Add Responsibility', class: 'btn btn-primary'
 
-  = field_set_tag 'Accomplishments' do
+  = field_set_tag 'Accomplishments', class: 'form-group' do
 
     = f.nested_fields_for :accomplishments do |af|
-      .well
-        = af.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
+      .well.well-lg.clearfix
         = af.input :text
         = af.input :tag_list, input_html: { value: af.object.tag_list.to_s }
+        = af.remove_nested_fields_link '', class: 'btn btn-danger pull-right glyphicon glyphicon-trash', role: 'button'
 
     = f.add_nested_fields_link :accomplishments, 'Add Acomplishment', class: 'btn btn-primary'
 
-  = field_set_tag 'Projects' do
+  = field_set_tag 'Projects', class: 'form-group' do
 
     = f.nested_fields_for :projects do |pf|
-      .well
-        = pf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
+      .well.well-lg.clearfix
         = pf.input :title
         = pf.input :description
         = pf.input :tag_list, input_html: { value: pf.object.tag_list.to_s }
+        = pf.remove_nested_fields_link '', class: 'btn btn-danger pull-right glyphicon glyphicon-trash', role: 'button'
 
     = f.add_nested_fields_link :projects, 'Add Project', class: 'btn btn-primary'
 
-  = f.button :submit
+  .form-group
+    = f.button :submit
