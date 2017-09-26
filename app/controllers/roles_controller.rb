@@ -34,6 +34,10 @@ class RolesController < ApplicationController
   private
 
   def role_params
-    params.require(:role).permit(:title, responsibilities_attributes: [:id, :text, :_destroy])
+    params.require(:role).permit(
+      :title,
+      responsibilities_attributes: [:id, :text, :_destroy],
+      accomplishments_attributes: [:id, :text, :_destroy]
+    )
   end
 end

@@ -2,12 +2,21 @@
   = f.input :title
 
   = field_set_tag 'Responsibilities' do
+
     = f.nested_fields_for :responsibilities do |rf|
       .well
         = rf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
         = rf.input :text
 
-
     = f.add_nested_fields_link :responsibilities, 'Add Responsibility', class: 'btn btn-primary'
+
+  = field_set_tag 'Accomplishments' do
+
+    = f.nested_fields_for :accomplishments do |rf|
+      .well
+        = rf.remove_nested_fields_link 'Delete', class: 'btn btn-danger pull-right', role: 'button'
+        = rf.input :text
+
+    = f.add_nested_fields_link :accomplishments, 'Add Acoomplishment', class: 'btn btn-primary'
 
   = f.button :submit
